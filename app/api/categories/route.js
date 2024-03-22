@@ -1,18 +1,16 @@
-const categories = [
-    {
-        id: 1,
-        name: 'Category 1',
-        description : 'Category 1 description',
-        url: '/category/1',
-    },
-    {
-        id: 2,
-        name: 'Category 2',
-        description : 'Category 2 description',
-        url: '/category/2',
-    }
-]
+export async function GET() {
 
-export async function GET(request) {
+    const res = await fetch(`${process.env.API_URL}/categories`, 
+    {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        cache: 'no-cache'
+    })
+    
+    const categories = await res.json()
+
+
     return Response.json(categories)
 }
