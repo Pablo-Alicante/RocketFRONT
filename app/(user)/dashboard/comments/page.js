@@ -15,7 +15,7 @@ export default async function DashboardComments ({ params, searchParams }) {
   return (
     <>
       <h1>DASHBOARD COMMENTS</h1>
-      {comments && comments.map(comment => <Comment comment={comment} />)}
+      {comments && comments.map((comment, index) => <Comment key={index} comment={comment} />)}
     </>
   )
 }

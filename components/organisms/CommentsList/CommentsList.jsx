@@ -13,7 +13,7 @@ const CommentsList = async () => {
 
   return (
     <>
-      {comments && comments.map(comment => <Comment comment={comment} />)}
+      {comments && comments.map((comment, index) => <Comment key={index} comment={comment} />)}
     </>
   )
 }

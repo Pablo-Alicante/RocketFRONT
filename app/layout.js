@@ -31,10 +31,11 @@ const getCategories = async () => {
 export default async function RootLayout({ children }) {
 
 const categories = await getCategories();
+
   return (
     <html lang="en">
       <body className={montserrat.variable}>
-        <Header menu={categories.categories}/>
+        <Header menu={categories}/>
           <main>
             {children}
           </main>

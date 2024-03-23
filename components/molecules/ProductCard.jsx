@@ -18,7 +18,7 @@ const ProductCard = ({ product, order }) => {
           />
         </div>
         <div className="absolute top-4 left-0 bg-red-500 text-sm text-white px-3 lowercase -rotate-45">Oferta</div>
-        <h3 className="mt-2 font-semibold font-title">"{order}" {product.title}</h3>
+        <h3 className="mt-2 font-semibold font-title">{order} {product.title}</h3>
       </Link>
       <p className="text-sm text-slate-400 mb-2">{product.description}</p>
       <p className="text-sm text-slate-400 mb-2">3 colores</p>
