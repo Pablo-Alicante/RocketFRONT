@@ -10,6 +10,7 @@ import Link from "next/link";
 const Header = ({menu}) => { // al poner llaver voy a poner mas de una linea de codigo
   return ( /* tiene que tener un elemento raiz, en este caso pongo <header> </header> pero en otros casos
   lo que haré será poner <> </> que se llama fragment */
+  
 
     <header className="container mx-auto">
         <div className="flex justify-between my-4 p-4">

@@ -24,7 +24,7 @@ export const metadata = {
 
 
 const getCategories = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`)
+  const response = await fetch(`${process.env.API_URL}/categories`)
   return response.json()
 }
 
@@ -35,7 +35,7 @@ const categories = await getCategories();
   return (
     <html lang="en">
       <body className={montserrat.variable}>
-        <Header menu={categories}/>
+        <Header menu={categories?.categories}/>
           <main>
             {children}
           </main>
